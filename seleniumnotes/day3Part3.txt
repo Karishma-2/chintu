@@ -1,0 +1,99 @@
+driver.manage().window().maximize(); //To maximize window
+Drag and Drop:
+
+<h2>Examples</h2>
+
+When we inspect any element and found open tag and close tag in between some text then choose locator as xpath with text method.
+xpath with text method:
+syntax:
+//htmltagname[text()='text']
+example:
+<h2>Examples</h2>
+//h2[text()='Examples']
+
+Scrolling : scrollIntoView
+
+To Scroll till PArticular element  is visible:
+1. method: executeScript(arg0,arg1)
+2. type of method: -+ without returntype with parameter
+3. parameter: 1. constant --> String argument
+            "arguments[0].scrollIntoView(true)"
+           2.WebElement ---> upto which we have to scroll
+Interface: JavascriptExecutor
+4.Can we call methods directly from Interface?
+No
+5. How to call a method from interface?
+Typecast WebDriver Object into JavascriptExecutor
+JavascriptExecutor js=(JavascriptExecutor)driver
+   example:    float       f   =(float)           9/2;
+
+call method by using js object:
+js.executeScript("",WebElement);
+
+Drag and drop:
+
+Method: dragAndDrop(WebElement source , WebElement target)
+source: which element we have to darg
+target: on which element we have to drop
+Type of method : -+
+nature of method: non static
+Access or call : by object name
+class: Actions
+Constructor: it is parameterized 
+constructor parameter: WebDriver Object
+package: org.openqa.selenium.interactions.Actions
+*** Any method which called from Actions class must follow build().perform()
+
+
+Mousehover:
+
+<span class="nav-text">
+Wish from Any Website
+</span>
+
+xpath withtext method: By.xpath("//span[text()='Wish from Any Website']");
+
+
+Exception in thread "main" org.openqa.selenium.ElementNotInteractableException: element not interactable
+
+Means: Element is there locator correct but still on element we cannot do action
+reason it is hidden
+selenium webDriver directly interacts with browser
+we cannot do actions on hidden element
+
+if we want to do actions on hidden element we  have to make elmenet visible
+it is possible with the help mousehover
+
+How to do mousehover?
+Method: moveToElement(WebElement );
+Type of method : -+
+nature of method: non static
+Access or call : by object name
+class: Actions
+Constructor: it is parameterized 
+constructor parameter: WebDriver Object
+package: org.openqa.selenium.interactions
+*** Any method which called from Actions class must follow build().perform()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

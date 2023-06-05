@@ -1,0 +1,245 @@
+What is Operator?
+Operator is a symbol that is used to perform particular actions or Operations.
+example: + - > <
+
+Why we have to learn Operators in Programming?
+to do mathematical calculations
+to check conditions
+to perform logical operations.
+
+How many types of Operators?
+1. Arithmetic operator
+2. Relational operator
+3. Logical operator
+4. unary operators
+    logical not
+    increment/decrement
+    negation
+5. terenary operator or conditional or if else
+6. Assignment operator
+7. Bitwise operator
+8. shift operator
+1. Arithmetic operator:
+purpose: to perform mathematical calculations
+operators list: 
+       addition              +
+       subtraction           -
+       multiplication         *
+       division--> quotient   /
+                   remainder  % modulo
+
+Above five Arithmetic operators is divided into two types
+High priority * / %
+Low priority  + -
+
+Here * / % have equal priority but when compare to + - it is having high priority
+
+Here + - have equal priority but when compare to * / % it is having low priority
+
+Evaluation : left to right
+
+
+Examples:
+
+2+3*5
+
+In a given experession check how many types of operators are there 
+here only one type i.e Arithmetic operator
+inside Arithmetic operator here we have + *
+so * is having high priority
+
+2+3*5
+2+15
+17
+
+Note: high priority operator is evaluated first and then second low priority.
+
+(2+3)*5
+here braces is having high priority  When compare to all operators
+5*5=25
+
+
+2*4/2
+
+2*2=4 invalid
+
+8/2=4 valid
+
+if expression is having all same priority operators then we to choose evaluation left to right.
+
+2+3-1
+5-1=4  valid
+or
+2+2=4  invalid
+
+2+3=5--> in Maths
+c=a+b
+here a,b operands 
+       c result variable
+      + = operators
+       operation
++ Performs Addition and = performs Assignment action.
+
+
+Relational Operator:
+purpose: to check condition or to campare LHS and RHS value or to find relation between two values or operands
+
+When : when we have to check only one condition.
+
+Scenario 1:
+Example Gmail Signin
+username :
+              next
+
+business logic:
+if user click next button read username from client side(UI) and  compare with database username
+if matches move to next page otherwise display invalid username.
+
+here on click we are verifying just a single username feild in this case we have to use Relational operator.
+
+
+Scenario 2: 
+I Purchase a laptop price : 65000
+  Im reselling it price: 70000
+
+sellingprice > costprice = profit
+
+
+Operators List :
+
+greater than                    >
+greater than or equalto         >=
+lessthan                        <
+lessthan or equalto             <=
+doubleequalto                   ==
+not equalto                     !=
+
+Above six operators are divided into two categories
+a. high priority :  > >= < <=
+b. low  priority : == !=
+
+
+Evaluation : left to right
+output type of data:  boolean either true or false
+
+** When compare to  Relational operator Arithmetic operator is having high priority.(2+3>5)
+
+Examples:
+
+2>2 false
+2>1 true
+2>3 false
+
+2>=2 true
+2>=1 true
+2>=3 false
+
+2<2 false
+2<1 false
+2<3 true
+
+2<=2 true
+2<=1 false
+2<=3 true
+
+2==2 true  
+2==1 false
+
+2!=2  false
+2!=1  true
+
+What is difference between sigle equalto = and double equalto ==?
+= Assignment operator it is used to store data from RHS to LHS int a=100;
+== Relation operator it is used to compare both LHS and RHS value. a==100
+
+Combination of Arithemetic and Relation Operator:
+
+2+3*5>3*3+5<2+2*5==5!=0
+2+15>9+5<2+10==5!=0
+17>14<12==5!=0
+  1 <12==5!=0
+    1==5!=0
+      0!=0
+        0
+        false
+here true means 1 false 0 in calculation
+
+
+int a=10;
+boolean res= a=10;  error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,113 @@
+Multiple Links:
+1. How links design in tag language?
+  By using <a > tag
+2. How to get all links from current page?
+  we cannot inspect each and every link
+  so we have to use locator as tagname
+3. how to find more then one element in selenium?
+   to find single element we use findElement()
+   to find morethan one element we use     findElements()
+method: findElements(By )
+type: ++
+returntype: List<WebElement>
+parameter: By
+nature: non static
+class: ChromeDriver
+Interface: WebDriver
+
+
+How to do right click on each link?
+Apply right click logic on each link inside loop
+
+Rightclick:
+method: contextClick(WebElement )
+
+To open click in new tab use Robot class method.
+i.e KeyPress(KeyEvent.VK_DOWN)
+    KeyRelease(KeyEvent.VK_DOWN)
+
+To shift control from one tab to another tab
+ we have to use windows handling concept.
+
+
+
+
+Calender or datepicker:
+
+To do scrolling by using horizontal,vertical pixels we have to use
+Method: executeScript("")
+type: -+
+parameter: String
+           i.e scroll(Hpx,Vpx)
+               scroll(100,0)
+               scroll(0,342)
+nature: non static
+Interface: JavascriptExecutor
+can we create object for Interface: no
+How to call method from JavascriptExecutor: typecast WebDriver object to JavascriptExecutor
+
+JavascriptExecutor js=(JavascriptExecutor)driver;
+call method:
+js.executeScript("scroll(0,340)");
+
+
+Important:
+Exception in thread "main" org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+
+Calender buttons are arranged in the form table(rows and cols).
+In HTML Rows and cols means table is design by using <table> tag
+
+example:
+
+<table id="xyz" class="xyz">
+<thead>
+<tr> 
+<th>Sunday </th>
+<th>monday </th>
+<th>tuesday </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>  
+
+<td> 1  </td>
+<td> 2  </td>
+<td> 3  </td>
+</tr>
+<tr> 
+<td> 1  </td>
+<td> 2  </td>
+<td> 3  </td>
+
+ </tr>
+
+<tr> 
+
+<td> 1  </td>
+<td> 2  </td>
+<td> 3  </td>
+
+ </tr>
+</tbody>
+
+</table>
+
+
+Relative Xpath:
+//table[@class=""]//tbody//tr/td
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+

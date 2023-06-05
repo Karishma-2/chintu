@@ -1,0 +1,475 @@
+Methods:
+Example: i want to develop ATM services
+Inside main we are writing code for
+pin validation,withdraw,deposit,ministatement all took some 100 lines of code.
+In this 100 line of code 30 lines are repeating
+code length is increased
+if any error occurs we have to modify the program, complete program will get distrub.
+If we want to use few logics outside class we cannot use.
+
+Summary :
+without methods concept:
+a.logics will be repeated
+b.modification will distrub whole code
+c.length of program is increased
+d. no reusability(we cannot use code out side class)
+
+In methods a very big program or code we divide into meaningfull small parts each part will perform particular task, with this activity we can use that small part or piece of code anywhere in project easily,we can use same code for n no.of times with different values , no repeations
+with this code length reduced
+if any error occurs easily i can modify piece of code without disturbing other parts of code.
+
+What is method?
+A method is a block of code.
+or
+Collection of statements or set of code grouped together to perform particular task known as methods.
+
+What we will acheive using methods?
+a. Reusability
+b. easy modification
+c. readability
+How many types of methods we have ?
+two types
+a. Pre  defined
+b. user defined
+
+What is Pre defined methods?
+ In built methods or a method which comes with software
+  example: length() , println()
+predefined methods means someone already define the logics
+we the Programmers just use those method to acheive our  business requirements
+
+Java is Rich in methods.
+
+When Java is Providing all predefined then why we have to use user defined methods?
+
+Reason: If we cannot acheive business requirements with predefined methods then we have to deisgn our own methods that is known user define methods.
+
+In how many ways we can write user define methods?
+In four ways we can write user define methods
+returntype parameter
+-            -         without returntype without parameter
++            -         with    returntype without parameter
+-            +         without returntype with    parameter
++            +         with    returntype with    parameter
+
+- without + with
+
+What is returntype and parameter?
+by using returntype and parameters methods will communicate with each other
+
+When we are defining user define methods we need to concentarte on two parts
+a. method defination
+b. method call
+
+
+What is method defination?
+method defination provides or define Job or purpose of method.
+
+example: length method
+Job is find no .of elements in array
+
+
+println()
+job is display provided text on console
+
+How to  write method defination?
+method defination  is divide into two parts
+a. method header  or method signature
+b. method body
+
+What is method header or signature?
+method signature defines
+a. scope of method (public , private protected ,default) optional
+b. compile time/Run time(static /non static) optional
+c. returntype of method (void int char String WebDriver , int [])
+d. methodname(declaration of parameter)
+e. no semicolon
+
+Scope of method :(p3D)
+In java we have four access modifier which decides scope of method , means where we can access method where we cannot.
+
+public  In method signature if we found public modifier we can access method in class, in package , in project anywhere
+private In method signature if we found private  modifier we can access methods only  in class. outside classes cannot access.
+protected package level( we can access in class , outside class in package)
+default : same as protected
+
+*** no need to write default , if we do not write public private protected it is consider as default
+
+What is static keyword in java?
+static is keyword in java used for memory management
+
+static keyword we can apply with variables, methods , blocks
+
+If any member is static it is consider or belongs to class
+static variable --> class variable
+static method  -->  class method
+
+static variable:
+if any variable declaration is having static before datatype known as static variable:
+
+int age = 25; // non static variable
+static int age =25; // static variable
+
+static variable refers to common property for all Objects.
+
+example:
+class Student
+{
+String name;
+int id ;
+int age;
+String institutename;
+}
+non static :
+Student1  s1:  name=Anvesh id=01 age=24 institutename=SSS
+Student1  s2:  name=Hima id=02 age=22 institutename=SSS
+Student1  s3:  name= savinay id=03 age=23 institutename=SSS
+
+
+class Student
+{
+String name;
+int id ;
+int age;
+static String institutename;
+}
+static :
+institutename=livetech
+Student1  s1:  name=Anvesh id=01 age=24 
+Student1  s2:  name=Hima id=02 age=22 
+Student1  s3:  name= savinay id=03 age=23 
+
+which variables we have to make static?
+which is  common for all objects
+
+*** static variables gets memory only once in the class area at the time of class loading
+*** it will save memory.
+
+What is returntype?
+Example:
+scan marks         to find total  marks
+Anvesh            santosh
+        samreen
+
+samreen is calling anvesh and saying scan student marks.
+samreen is calling santosh and saying find total marks
+santosh saying samreen i cannot find total because i do not have student marks list.
+
+After execution of method , method will return u back some value  , that value u can pass in any method as parameter
+
+method returntype will return value after execution of all instructions to the place from where the method is called.
+
+Method name:
+
+method name is user define we can write any name but we need to follow same rules as variable names.
+
+but methodname must follow with round braces which indicates it is a method
+
+int totalMarks  ---> variable
+int totalMarks[] ---> array
+class totalMarks ---> class
+int totalMarks() ---> method  
+
+Inside round braces we need to decalre parameters if it is required .
+
+
+
+
+syntax:
+method signature:
+accessmodifier  static/nonstatic returntype methodname( if parameters)
+
+What is method  body?
+{
+here will define logic
+}
+inside braces will write all logics or purpose of method.
+
+method defination= method signature+method body.
+
+syntax:
+accessmodifier  static/nonstatic returntype methodname( if parameters)
+{
+here will define logic
+}
+
+
+What is method calling?
+
+In one Progarm if we write multiple methods and if we do not call those methods will not execute.
+
+*** method we have to call or invoke explicitly
+
+When we are writing method in class point to be remember?
+
+1. do not write method defination inside main method or anyother method
+2. we can write methods inside class with out main method but methods execution will not happend because java execution will start with main
+ if we want to execute methods call inside main method.
+
+
+
+What is Block?
+block is a area 
+{
+we can write any code
+
+}
+
+but blocks will not have any name.
+
+How types of blocks?
+static
+non static
+
+When blocks will execute?
+
+blocks are first members to execute in class
+static block will execute at compile time
+non static block will execute at run time
+
+{
+
+
+}
+
+static
+{
+
+
+}
+
+examples:
+
+{
+		System.out.println("Hello Im non static block");
+	}
+	
+	static
+	{
+		System.out.println("Hello im static block");
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+	
+}
+
+output: Hello Im static block
+
+here static will execute when class is loading
+because static belong to class and handle by compiler.
+and static blocks statements are first statement to be executed.
+
+
+     {
+		System.out.println("Hello Im non static block");
+	}
+	
+	static
+	{
+		System.out.println("Hello im static block");
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Im main method");
+	}
+
+}
+
+output:
+Hello im static block
+Im main method
+
+When non static block will execute?
+it will exceute at runtime handle by JVM
+if we want to execute non static blocks we need create object.
+
+
+What is Object?
+
+Object which is having features,functionality exactly which is written inside class.
+
+for one class we can create n no.of objects , all will have similar properties.
+
+How to create Object?
+classname objectname=new  classname();
+example:
+
+public class BlocksExample {
+	
+	{
+		System.out.println("Hello Im non static block");
+	}
+	
+	static
+	{
+		System.out.println("Hello im static block");
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Im main method");
+		BlocksExample b =new BlocksExample();
+	
+	}
+	
+	
+}
+
+output:
+Hello im static block
+Im main method
+Hello Im non static block
+
+
+**** blocks / variables:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

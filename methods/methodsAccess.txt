@@ -1,0 +1,19 @@
+How to call methods Outside class?
+First:
+a. check access modifier or specifier
+      access modifier will tell us that is method visible or not outside class, in package or outside package
+           within class        outsideclass           outsideclass
+                               with in package        outside package
+public        yes             yes                     yes
+private       yes             no                      no
+protected     yes             yes                     no
+default       yes             yes                     no
+
+b. check method is static /non static
+
+If method is static call with class name inside package
+If method is static call with class name and import package.class  , outside package
+
+
+If method is non static call with Object name inside package
+If method is non static call with Object name and import package.class  , outside package

@@ -1,0 +1,17 @@
+FrameWork: Hydrid framework
+Design Pattern: Page Object Model  or POM
+
+POM is a design Pattern in selenium that creates an Object repository for storing all webelements.
+
+It is useful in reducing code duplication and improves testcase maintenance.
+
+In POM will consider each webpage of an application as classfile,
+each class file will contains on only corresponding webelements.
+
+Programming language: Java --> J2SE
+Testing API: Selenium WebDriver
+Inbuild Testing framework: TestNG
+CI/CD build management tool : JENKINS
+
+
+

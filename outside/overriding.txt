@@ -1,0 +1,109 @@
+When we have to do overriding ?
+if child class is not satisfy with parent class methods implementation
+then child can rewrite parent methods  in child class according to their requirement is known as overriding
+
+What is late binding?
+Here method call binds with its method defination at the run  time is known as late binding.
+
+Who will resolve method calling in method overriding?
+JVM (by using run time Object)
+
+Parent obj =new Child();
+
+Parent obj--> reference type
+new Child();--> run time Object
+
+Example:
+public class MansoorFather {
+
+	public void property()
+	{
+		System.out.println("3BHK");
+	}
+}
+
+public class MansoorChild extends MasoorFather{
+	public void property()
+	{
+		System.out.println("5BHK");
+	}
+public static void main(String[] args) {
+	PandeyFather obj1=new PandeyFather();
+	obj1.property();//parent method3BHK
+	
+	PandeyChild obj2=new PandeyChild();
+	obj2.property(); //child method 5BHK
+	
+	PandeyFather obj3=new PandeyChild();
+	obj3.property();// child method 5BHK
+}
+}
+
+**
+// here first compiler check property method is there or not in parent class
+// then jvm will check parent class method is overriden in child class or not , if it is define then child class method will invoke
+
+Rules for overriding?
+1. method name and parameter list must be same
+2. return must be same (only below 1.5 version)
+3. from 1.5 version of java co variant concept is allowed 
+means return type can be different
+
+What is co variant?
+
+parent class method returntype is different when compare to child class overriding method
+
+Which type is known as covariant?
+
+Parent child
+
+means returntype must have relationship i.e Parent and child
+
+***primitive data types not allowed
+** covariant concept applicable on non primitive type of data
+
+
+Non Primitive type:
+Number--> Byte Short Integer Float Double--> non  primitive
+
+What is final?
+final is a keyword applicable on variables and methods
+if it is final variable we cannot re initialize
+
+int a=100; valid 
+a=200; valid
+
+final int a=100; valid
+          a=200; invalid 
+
+in method signature if we found final keyword then that method known as final method.
+Final method we cannot Override.
+
+Overriding with static methods
+
+parent--> static method  (class level method)
+child  --> non static    (object level method)
+                         not possible
+
+
+parent--> non static method  (Object level method)
+child  --> static    (class level method)
+                         not possible
+
+
+parent--> static method  (class level method)
+child  -->    static    (class level method)
+                          possible            [It is not overriding , it is known as method hiding]
+
+
+
+
+
+
+
+
+
+
+
+
+

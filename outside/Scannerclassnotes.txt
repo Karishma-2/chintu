@@ -1,0 +1,213 @@
+If we initialize the variables directly in program
+means setting input values is known as hard code.
+Hardcode means we cannot altered(change) input values without
+modifying the program.
+
+How to give different input everytime without modifying program?
+Java is Providing predefined class called Scanner
+With the help of Scanner class methods we can enter input values while running the progarm
+it means no need initialize the value in the program (no need to do hard code)
+
+About Scanner class:
+
+Class name : Scanner
+Purpose: Read or scan input data ,through keyboard we can enter the input data
+Type of class: Pre defined (in built)
+Methods : 
+int   nextInt()
+float nextFloat()
+double nextDouble()
+boolean nextBoolean()
+**To scan String data we have two methods
+a. next()  b. nextLine()
+
+next() method will scan all characters but not space
+Example:
+if input is "Afsara Samreen"
+next() method will scan only "Afsara"
+here space is the ending character
+
+
+nextLine() method will scan all characters and allow space also
+Example:
+if input is "Afsara Samreen"
+nextLine() method will scan "Afsara Samreen"
+here Enter key is end character
+
+next() will scan  one word without space
+nextLine() will scan morethan one word with space
+
+*** To scan character i.e char type of data we do not have any method inside Scanner class, then how to scan 
+char type of data?
+
+Here to scan char type of data we need to take help
+from String class
+Inside String class we have a Predefined methods
+method: charAt(int )
+
+behaviour of charAt(int )
+charAt() method will return only particular position (index) value.
+
+example: 
+AFSARA
+012345
+go and get character value at index 2 = S--> charAt(2)
+
+to scan only one character value we have to use charAt() method along with next() or nextLine()
+next().charAt(0)
+here next() allows u to enter group of characters
+and charAt() will get only one value from the entered characters.
+
+example: 
+input :
+AFSARA_SAMR E E N
+012345678910111213
+next().charAt(6)--> _
+next().charAt(14)-->Run time error String index out of bounds Exception
+
+If we want to scan only space then use
+nextLine().charAt(0)
+
+Nature of methods: non static
+memory allocation will be at Run time if we create object then only we can access the methods
+
+Steps:
+1. create Object
+2. import package in which  Scanner class is define
+3. call methods using object name
+
+Create Object:
+
+Classname objectname = new Classname(ifparameters);
+
+Scanner   scan      = new Scanner(System.in);
+
+Scanner is a classname
+scan is userdefined object name
+new is a keyword to allocate memory
+System is a predefined class
+in is inputstream it is a static function
+input data is supplied using keyboard
+
+** always when we use any prdefined class then we have to import package
+
+import java.util.Scanner;
+
+here import is a keyword
+      java.util is package name in which Scanner class is define
+
+call method by using object name
+scan.next()
+scan.nextInt()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,86 @@
+JDK--> Java Development Kit--> Software
+We can write Programs in notepad and can run in cmd.
+
+IDE
+1. u can maintain n number of Projects
+2. in built libs
+3. u can download external plugins
+
+1. Netbeans--> small scale, academic 2. Intilije 20% 3. Eclipse 80-90% 
+Eclipse: 2020-12
+
+Workspace:
+What programs or projects we create inside eclipse
+it has to store in local system in the form  folder
+that place we called as workspace
+
+How to create Project inside eclipse?
+1. go to file
+2. go to new-->click on project--> click on java folder
+   --> select java project --> click next
+3. Enter Project name
+4. make sure JRE is 11 version
+5. click on finish
+6. click on do not create module
+7. click no 
+8. Project is created.
+
+What is package in java?
+package in java is a mechanism to encapsulate a group of classes,sub packages and interfaces.
+
+a. Preventing naming conflicts
+   In one project if we create two classes with same name 
+   then we will be facing duplicate error
+   to avoid we can create two classes with same name
+    but in different packages
+  now these classes will differ wrt package.
+b. making searching/locating and usage of classes,interfaces easier.
+c. Providing controlled access:
+   Protected and default have package level access control.
+A protected  Member is accessible by classes in the same and sub classes.
+
+
+How to create package in project?
+a. right click on src folder
+b. go to new click on package
+c. package name must start with lowercase alphabet no spaces
+d. click on finish
+e. empty package is created(white in color)
+
+
+How to create class in particular package?
+a. right click on package
+b. go to new --> click on class
+c. class template will be display
+d. Enter Classname and follow classname rules
+e. check public static void main(String args[]) stub
+f. click on finish.
+g. class will be created under package
+
+Note : if we do not do rightclick on particular package then default package will be created and in that class will be created.
+
+default package means that package will not have any name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

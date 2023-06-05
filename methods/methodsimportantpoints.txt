@@ -1,0 +1,65 @@
+1. When ever we call any method first find out what type of method it is , second where we are calling methods means inside which block.
+
+Method will be two types
+a. static method 
+b. non static method
+
+Block will be two types
+a. static 
+b. non static
+
+Example:
+In Type1 Program
+method addition is static method
+we want to call addition method inside main method
+main method is static method(static block)
+
+
+***If method is static and a place where we are calling that method or block is static then call with
+a. classname.methodname() // anywhere in project
+b. methodname() // only inside class
+
+
+** When we call any method control move to method defination once defination execution finish control come back to same place from where we called a method.
+
+** static members belongs to class
+
+Example:
+Type1NS-->Class
+Inside Type1NS class we have a method addition which is non static.
+
+in method signature if we do not find static keyword that method known non static.
+
+How to call non static method inside static methods or blocks?
+
+addition()--> non static and we are calling in main method which is static
+
+call with Object name,
+non static method or variables get initiated at Run Time.
+so we to have call by using object name.
+
+How Object is created?
+syntax:
+classname objectnam= new classname();
+example:
+Type1NS    obj=new Type1NS();
+
+Type1NS obj--> compiler
+new Type1NS () --> run time Object -->JVM
+
+Now call methods by using objectname
+example: obj.addition();
+
+What if we try to call non static members inside static?
+compile time error we will face
+i.e static reference we cannot make to non static feilds or methods
+
+
+
+
+
+
+
+
+
+

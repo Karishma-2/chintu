@@ -1,0 +1,187 @@
+1. what is method signature?
+  method signature defines what is method name and parameters.
+
+2. Who will use method signature?
+   compiler will use method signature.
+
+3.How compiler is resolving method call ?
+By using method table
+
+Every class will have method table
+it consist of methods list , compiler will use that method table to bind method with method defination.
+
+4. Can we have morethan one method in  class with  same method signature
+    a. same returntype,methodname,parameters
+    b. different returntype,same methodname,parameters
+?
+
+a. same returntype,methodname,parameters
+In one class we cannot write two methods with same returntype,methodname and parameter list
+
+ b. different returntype,same methodname,parameters
+if we change returntype of same method signatures still it is consider as same method 
+therefore we have to face compile time error(duplicate method)
+
+//Duplicate method m1(int) in type Sample
+
+
+5. When we say two methods are said to be overloaded?
+In one class if we find morethan one method
+with same method name and different parameter list is known as method overloading
+
+*****
+6. In method overloading Who will resolve method calling?
+compiler will bind method call with its method defination.
+It is known as early binding.
+
+7.How compiler resolve method calling in overloading by using what?
+                 by class reference
+
+8. What is compiletime polymorphsim or static polymorphsim or earlybinding?
+Polymorphsim: many forms
+same thing exist in many forms
+
+Question: In method overloading if we call a method with value and if that datatype is not available then we will face compile time error or not ?
+
+a. if datatype in method call is less in size when compare to data type define inside method signature then auotomatically it is converting data
+this concept is known automatic promotion
+
+b. if in method call datatype of parameter size is more when compare to method defination parameter then it connot convert.
+will face compile time error
+errormsg:
+The method m1(int) in the type Sample is not applicable for the arguments (double)
+
+*what is automatic promotion in overloading?
+converting method call dataype into next level is known as automatic promotion
+
+* chart of automatic promotion?
+
+byte short 
+          int long float double
+      char
+
+*In method overloading if we have two methods with same name
+but differs in parameter list
+ first method  parameter is parent
+  second method  parameter is child
+
+
+public class Sample {
+
+	public void m1(Object a)
+	{
+		System.out.println(a+" Im object");
+	}
+	
+	public void m1(String n)
+	{
+		System.out.println(n+" Im String");
+		
+	}
+}
+
+public class Test {
+public static void main(String[] args) {
+	Sample s=new Sample();
+	s.m1(new Object());
+	s.m1("sam");
+	s.m1(null); // it will invoke child class parameter
+	
+}
+}
+
+output:
+java.lang.Object@36aa7bc2 Im object
+sam Im String
+null Im String
+
+In method overloading parameters are different but relationship between those parameters are parent and child
+in method call first priority is to exact match
+if method call parameter data type is belongs to parent and child then priority is child. 
+
+
+Example: ambiguity
+public class Calculation {
+
+	public void add(int a,float b)
+	{
+		System.out.println("Result : "+(a+b));
+	}
+	
+	public void add(float a ,int b)
+	{
+		System.out.println("Result : "+(a+b));	
+	}
+}
+
+public class CalculationTest {
+
+	public static void main(String[] args) {
+		Calculation c=new Calculation();
+		c.add(2.2f, 2);
+		c.add(2, 3.2f);
+		//c.add(2, 2);//The method add(int, float) is ambiguous for the type Calculation
+	}
+
+}
+
+Example2:
+public class Parent {
+public void display()
+{
+	System.out.println("Im Parent");
+}
+
+
+}
+
+public class Child extends Parent {
+	public void child()
+	{
+		System.out.println("Im child");
+	}
+	
+	//two methods 1inherited+1 child class method
+	             // display           child()
+}
+
+
+public class Sample2 {
+
+	public void m1(Parent p)
+	{
+		p.display();
+	}
+	
+	public void m1(Child c)
+	{
+		c.child();
+	}
+}
+
+public class Sample2Test {
+public static void main(String[] args) {
+	Sample2 s=new Sample2();
+	Parent p=new Parent();
+	s.m1(p);
+	Child c=new Child();
+	s.m1(c);
+	
+	Parent pc=new Child();
+	s.m1(pc); // it will invoke parent class method as it is early binding .
+}
+}
+
+** is method overloading can we achieve by changing returntype?
+no
+
+
+
+
+
+
+
+
+
+
+

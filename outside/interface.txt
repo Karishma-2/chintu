@@ -1,0 +1,144 @@
+Interface: SRS Service Requirement Specification
+
+Example:
+
+We can test WebApplication in chrome browser , edge browser , Firefox , safari
+these browsers are using same specifications  to run application.
+
+these browsers are implementing common API i.e WebDriver API  provided by Selenium
+
+means Selenium is telling that  browsers who wants to test application they should implement service provided by webdriver API.
+
+ chrome browser , edge browser , Firefox , safari vendors are responsible for implementation.
+
+
+** Any Contract between client and service provider is Interface
+
+***
+Old version: below 1.8 version
+Interface is pure collection of abstract methods.
+
+new Version: 1.8(J2SE8)
+static methods and default methods are allowed--> with implementation
+
+from 1.9 (J2SE9)version private methods  are allowed --> with implementation
+
+
+1. In Interface will write only public and abstract methods
+   example:
+
+   Interface Sample
+{
+
+public void m1(); // here abstract key not used but still it is consider as abstract method
+abstract void m2();// here public modifier is not written still it is consider as public method.
+}
+
+therefore in  interface by default methods are abstract and public
+
+
+this Interafce methods implementation is done in child class by  using implements keyword
+it is known as HAS A relation ship.
+
+Inheritance done by extends keyword is IS A relation ship.
+
+
+class Test implements Sample
+{
+// public we have not written it is not acceptable because in interafce we have written public 
+void m1() 
+{
+
+}
+// m2() method is not implemented so it is not acceptable , then this class consider as abstract class
+}
+
+therefore:
+access modifiers of abstract methods should not change in impelmented class
+all methods of interface must implement otherwise make it as abstract class and leftover methods are implemented in child class
+
+
+Example:
+
+public interface InterfaceSample {
+public void m1();
+public void m2();
+}
+
+public abstract class InterfaceTest implements InterfaceSample{
+
+	@Override
+	public void m1() {
+System.out.println("Im m1 method");		
+	}
+}
+
+
+//Interface contains static methods or not?
+
+public interface InterfaceSample {
+public void m1();
+public void m2();
+public static void display()
+{
+	System.out.println("Im always here");
+}
+}
+
+
+**** 
+In java 1.8 version default,static methods can define
+
+If we want to extend functionality of interface without distrubing implemented classes.
+default methods can  override.(Virtual extension methods or defenders method)
+static methods for utility and always called with Interface name.
+private methods to avoid duplicate and call inside default methods.
+
+
+** example WebDriver , chromeDriver,Edge
+
+
+** multiple inheritance
+
+** Access modifiers
+
+**difference between abstract and interface
+Difference between abstract and Interface
+
+Abstract:
+1. Abstract class does not support multiple Inheritence
+2. Abstract class contains constructors
+3. Abstract class contains both abstract methods and concrete methods
+4. abstract methods can be public protected but not static private nor final.
+
+Interface:
+1. Interface support multiple Inheritence
+2. Inteface does not contains constructors
+3. Contains only abstract methods or incomplete member method with signature below java 1.8 version
+and above version it can contain private ,default static methods with implementation
+4. By default interface abstract methods are public and abstract and rest modifiers not applicable.
+
+
+
+
+Important points:
+1. In interface we cannot write implementation for instance(non static) methods.
+example:
+public interface InterfaceSample {
+public void m1() //Abstract methods do not specify a body
+{
+	
+}
+}
+
+2. For Interface we cannot create instance (object creation) as it is having abstract methods.
+
+3. If we are providing implementation for interface abstract methods using keyword as implements to inherit and override and this relation is known as HAS A relation ship.
+
+
+
+
+
+
+
+

@@ -1,0 +1,222 @@
+Abstraction:(not open)
+Abstarction means hiding internal implementations and high light(shows) only functionality.
+
+Example:
+
+1.HDFC netbanking
+End user can see only service provided by HDFC bank
+but not how that services are implemented.
+
+2. ATM
+
+3. Car,human
+
+Advantages:
+1. Security
+2. Without distrubing enduser and GUI part we change anything internally even programming langauge.
+   i.e Enhancement
+3. if internal implementation is not available for outsiders then maintance/modularity can improved.
+
+
+abstract modifier:
+
+1. abstract modifier is known as non access specifier
+2. abstract means it is not complete or something is partial or in general we can say it is not open.
+3. this abstract keyword is applicable with methods and class
+  *** but not on variable
+4. if abstract keyword is found with method name it is known as abstract method
+5. if abstract keyword is found with class name it is known as abstract class.
+
+When we have to write method as abstract?
+if we do not know implementation details of method then we have to just declare method as abstract.
+
+
+Example:
+
+End user wants to know Fixed deposit intrest rate.
+next immediate question which bank FD intrest rate?
+
+
+class FixedDeposit
+{
+ 
+public float getIntrestrate()
+{
+we do not know
+}
+
+}
+
+
+class FixedDeposit
+{
+ 
+public abstract float getIntrestrate(); 
+// if we do not know implementation details then remove body part end with semicolon and write abstract modifier---> which say method is partially written , in complete method or abstract method.
+}
+
+*** Who will provide implementation for abstract method?
+child class will provide.
+
+example
+
+class HDFC extends FixedDeposit
+{
+public float getIntrestrate()
+{
+return 6.5f;
+}
+}
+
+class SBI extends FixedDeposit
+{
+public float getIntrestrate()
+{
+return 6.5f;
+}
+}
+
+
+Syntax:
+
+a. public abstract float getIntrest()
+{ 
+ 
+ }
+---> compile time error here abstract modifier is used and compiler is saying abstract method will not have body
+
+b. public float getIntrest();
+   here method end with semicolon mean no body or no implementation 
+we have to write abstract or body
+
+c.public abstract float getIntrest(); valid
+d. public  float getIntrest()
+{
+
+}  valid
+
+summary: abstract method will  have declaration not logic means no body.
+
+*** If any class is having atleast one abstract method is known as abstract class
+means we have to use abstract modifier with class.
+
+** If the implementation of class is not completed ,partial implemented class that is known as abstract class.
+Advantage : no one can create object for abstract class because class is  not fully implemented
+
+Abstract class VS abstract method
+
+class Sample
+{
+public abstract void m1();
+}
+
+class Test
+{
+main()
+{
+Sample s =new Sample();
+s.m1();//here m1 is not implemented , means no defination  
+}
+}
+
+compiler will give error , because  in one class if we write atleast one abstract method  then we have to declare class as abstract.
+
+abstract class can have zero abstract methods.
+
+Example:
+
+class Sample
+{
+public void m1()
+{
+
+}
+
+public void m2()
+{
+}
+}
+
+Class Test
+{
+main()
+{
+ Sample s=new  Sample();
+s.m1(); //no output ,because m1 is having body , but no logic is written , this type of implementation is known as dummy implementation. no use of creating object , it does not make any sense.
+s.m2();
+}
+}
+
+therefore if class is having atleast one abstract method or dummy implementation then we can make class as abstract.
+
+
+
+Who is responsible for implementation of abstract methods?
+child class
+it means we need to inherit and override in child class
+
+
+all abstract methods should have implementation in child class , if any one method is not having implementation in child class then make child class as abstract, then another subclass is responsible for implementation.
+
+main concept behind abstract class:
+if we do not write abstract method , then child class may provide implementation or may be not
+if we have any methods that must have implementation in child classes then such type of method we need to identify and write in parent class as abstract methods , then it is mandatory to child class to implement abstract methods.
+
+
+Summary:
+
+Abstraction:
+ *    Abstraction is a Process of hiding certain details and showing only       essential information to user.
+ *    
+ *    Abstraction can achieve by using abstract and interface.
+ *    
+ *   
+ *    concrete method:
+ *    A Method Which is having body or defination or which do not end with semicolon that method
+  called as concrete method.
+ *     A Method Which is not having body or nor defination or which  end with semicolon that method  called as
+ *    abstract method.
+ *    
+ *    How to declare abstract method?
+ *    By using abstract keyword.
+ *    
+ *    if abstract keyword used with method called as abstract method
+ *    if abstract keyword used with class called as abstract class
+ *    
+ *    What is abstract class?
+ *    collection of  concrete methods and atleast one abstract method .
+ *    
+ *    **** Abstract class is a restricted class that cannot be used to create objects.
+           abstract is a Keyword used with methods and class.
+           abstract is a non access specifier or modifier       
+ *    
+ *    ** To access methods , abstract class must be inherited+override from another class.
+ *     
+ *    When to use abstract  class?
+ *    To achieve  security.
+             or
+     An abstract class can be used  when we need to share the same method to all non abstract subclasses with their own specific logics or implementations.
+Therefore abstract class is usefull to make the Program more flexible and understandable.
+  
+
+               
+ *    
+ *    Abstract class will not provide full abstraction.
+ *    
+         In abstract class , abstract methods static,private and final is not allowed
+ *    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

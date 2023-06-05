@@ -1,0 +1,189 @@
+What is variable?
+A variable is a location name where information is stored.
+
+What is information?
+Information is data it can be Alphabets , numbers , special characters
+
+Can we store any type of data in location?
+yes we can store any type of data means number,alphabets,special charatcers,decimal numbers
+therefore there is no restrictions u can store any type of data in location.
+
+What is the problem if we do not restrict data to store in a location?
+Example:
+lets add two numbers
+store number1 i.e 10 in location a--> a=10
+store number2 i.e 20 in location b--> b=20
+store result after calculating in location c--> c=a+b
+no error found because we can add two numbers
+
+but if we enter input as other than number , example it can be alphabet or special character
+therefore we cannot add number with alphabets or special character
+then we have to face unexpected results or errors
+to overcome this we need someone who cross verify data before storing into location.
+
+** To cross verify the data we have to use Datatypes.
+
+What is Datatype ?
+a. Specifies memory size
+b. what type of values that can  be stored into memory location.
+
+Example Student Info:
+Name : Anvesh--> Group of alphabets --> String
+age  : 20--> integer
+Email: Anvesh123@gmail.com--> alphabets+numbers+specialcharacters-->String
+marks: 999--->integer
+per  : 99.9-->decimal number--> float , double
+grade: A --> single alphabet or single digit or single special character---> character
+Higher studies: yes  no
+                true false -->  boolean
+
+integer
+float
+double
+character
+boolean
+
+String
+
+
+What is Keyword?
+A purpose of the word already define
+         byte
+         short
+integer  int
+         long
+float    float
+double   double
+character char
+boolean   boolean
+
+
+"String"  it is not a keyword
+String is predefine class
+
+Datatypes is divide into two types
+1. Primitive type of data
+2. Non Primitive type of data
+
+1. Primitive type of data it is  also known as built-in data types or intrinsic datatype
+
+Primitive type of data is divided in two types
+a. numeric: 1. Integer 2. floating point
+b. non numeric: 1. characters 2. boolean 
+
+** Primitive datatype are not user define i.e Programmers cannot develop.
+
+ java defines eight primitive data types:
+         byte
+         short
+         long
+integer  int
+float    float
+double   double
+character char
+boolean   boolean
+
+
+*** 8 primitive type of data is divided in to 4 groups
+
+1. conditional category: boolean
+2. character  category: char
+3. Integer category: byte ,short ,int ,long
+4. Float category: float,double
+
+** All datatypes are Keywords, they are in small letters
+
+Non Primitive type of data :
+It is also known as derived datatypes or reference datatypes
+a. class
+b. Array
+c. Interface
+d. Object
+e. String
+
+** In Primitive type of data we can store only one value at atime , it known as general or fundamental types of data.
+
+** non primitive data types known as  advanced datatypes stores group of values.
+** basic datatypes: integer floating point,character,string boolean
+*** Data types are used in java because java is a strongly typed language.     
+Java compiler checks type compatibility
+    illegal operations cannot be compiled.
+
+What is declaration,initialization?
+
+Declaration tells about
+a. What is the location name (i.e variable name)
+b. What type of data it can store
+
+initialization defines What information we stored in location.
+
+Syntax:
+datatype variablename=value;
+
+datatype variablename ---> declaration
+
+variablename=value---> initialization
+
+String name="Avnesh";
+int    age=20;
+String email="avensh123@gmail.com";
+int marks=999;
+float per=99.9f;
+float per=99;
+double per=99.9;
+boolean HS=true;
+char grade='A';
+
+Rules for writing variablename:
+
+** variable name is userdefine but follows below rules.
+
+a. variable name must start with alphabets
+   uppercase : acceptable warning ex: Marks
+   lowercase : valid  ex marks
+b. do not start with numbers or specialcharacters
+   ex: 9marks=100 --> invalid
+       *marks=100--> invalid
+        marks9=100--> valid
+        
+c. do no contain spaces 
+   ex: total marks=420;---> invalid
+       totalMarks=420; valid
+       total_marks=420; valid
+d. do not use keyword as variable name
+   char int='A';   invalid
+  char is datatype  valid
+int is consider as location name   invalid ---> int is a keyword
+'A' data  valid
+
+ char ch='A';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         

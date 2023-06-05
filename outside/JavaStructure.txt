@@ -1,0 +1,286 @@
+1. What is class?
+In General class means example group of students
+Why we called group of students as class?
+beacause all students belongs to same category
+
+Example:
+GOD
+Humans
+Feature: eyes,nose,legs,hands,ears,color,hairs...
+Functions: walk,talk,jump,run,laugh
+
+bala,samreen,arun,sony....
+
+A document in which faetures and functions are defined i.e known
+as Class
+
+A thing which is having identity,state,behaviour known as Object.
+
+Technical defination for class:
+
+Class is a collection of objects
+class is a collection of variables and methods.
+class is a template or blue print
+
+Object: which is having state ,identity,behaviour
+
+
+Example2:
+Software company  ,myself CEO
+Im calling one employee and sharing my idea about new mobile
+and im asking him to work on it
+but i have not given any document for reference 
+
+Employee started work with his team --->  Day-1
+Day2 myself---> im asking him to do changes in his work
+Day3 myself---> im asking him to do changes in his finished work
+day4 myself---> add new functions
+Listen samreen i want to give a suggestion
+if u keep on changing ur requirements then we cannot develop our product on time.
+lets prepare one document in that will write all features,functions of mobile once it is finalized then we can start developing
+
+therefore a document in which features,functions are written known as class
+and outcome i.e mobiles called as object.
+
+
+What is class in java ?
+class is a keyword all ways write in lowercase only.
+class follows with classname
+and no semicolon
+and follows with body i.e open brace and close brace
+inside that will write code.
+
+class Classname
+{
+code
+}
+
+Rules to write classname?
+Classname is user defined(means we can give any name but follow below rules)
+1. Class name must start with uppercase alphabet, lower case alphabet is acceptable but it is warning according to naming convention rules of java 
+class name starts with uppercase alphabet.
+2. class name should not start with numbers or special characters
+3. class name should not contain spaces.
+
+classname as "sample" here "s" is lowercase no errors but it is warning
+according to the naming convention rules of java always class name must start with uppercase alphabets
+
+classname as Sample valid
+classname as 9sample invaild
+classname as *sample invalid
+classname as Sample9 valid
+classname as Sample Program invalid
+classname as Sample_Program valid
+
+
+Inside class body we have to write code this code will not run 
+because there is no main method.
+
+What is main method in java?
+main is method ,inside that "main body" what code we will write and what code we call it will only execute 
+and progarm execution and termination will done inside main method.
+
+public static void main (String args[])
+{
+//logic
+}
+
+
+
+public static void main (String args[])--> main method signature or method header
+{
+//logic
+}  main method body
+
+signature+body=main method defination
+
+public Access specifier method scope is through out project
+static memory will allocate at compiletime
+void nothing it will not return anything
+main method name
+String classname
+args name
+[] array symbol
+
+String args[]  cammonad line parameter
+
+{
+logic;
+
+}
+
+1. Why main method is public why can't it will be private protected or default?
+
+because JVM will look for main method if it is public then only it is visible , if we write other than public it will create Run time Excpetion.
+
+2. Why main method is void ?
+void means no returntype
+
+if any method is having returntype
+lets say one method job is to find total 
+after calculating total it will return total
+and this total u can use for other purpose example finding percentage
+but if main method return something we cannot use because program will terminates with main method
+
+
+About 
+System.out.println();
+
+To display a String or text or any msg or result or variable data on console will use System.out.println();
+
+What is println()?
+println() is a method to display text or results.
+Type: it is predefined method
+define in class: PrintStream
+Package: java.io
+
+Now if we want to call any method from PrintStream class
+we have to call by using PrintStream.println()--> it is not allowed in java
+
+A Predefined class called System it is defined inside a package called java.lang
+
+System is predefine class
+inside System class there is a static method called as out
+which will return or point towards PrintStream class
+
+System.out--> indirectly ur creating object for PrintStream
+System.out.println();-->method
+
+Java Program Structure:
+class Classname
+{
+public static void main(String args[])
+
+{
+System.out.println("Hello welcome");
+}
+}
+
+
+Why we cannot call println() by using PrintStream?
+
+1. Methods inside Printstream is non static ---> if we want to call , call with Object name.
+2. Inside PrintStream methods are protected
+3. out--> OutputStream --> it does not have PrintStream methods.
+
+final PrintStream instream = new PrintStream(new FileOutPutStream(new Filename(filename)));
+instream.println("Hi");
+
+
+Package:  java.lang
+   class  System
+      method: out  --> return PrintStream Object
+
+System.out.println();
+
+The System class contains several useful class fields and methods. It cannot be instantiated.Among the facilities provided by the System class are standard input, standard output, and error output streams;access to externally defined properties and environmentvariables; a means of loading files and libraries; and a utility method for quickly copying a portion of an array.
+
+
+
+The "standard" output stream. This stream is alreadyopen and ready to accept output data. Typically this streamcorresponds to display output or another output destinationspecified by the host environment or user. 
+
+For simple stand-alone Java applications, a typical way to write a line of output data is: 
+
+     System.out.println(data)
+
+
+Prints a String and then terminate the line. This method behaves as though it invokes print(String) and then println().
+
+Println()--> Print+go to new Line
+
+print("Hello");
+println("Welcome");
+
+
+HelloWelcome
+
+
+
+
+
+class Classname
+{
+public static void main(String args[])
+{
+
+System.out.println();
+}
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

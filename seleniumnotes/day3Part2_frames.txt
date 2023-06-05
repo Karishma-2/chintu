@@ -1,0 +1,110 @@
+For Multiple frames Program Which is thought in class we required four html pages
+a. frame_a.html 
+b. frame_b.html 
+c. frame_c.html 
+d. frames.html
+
+*** do not open frame a,b,c pages
+1. right click on frames.html -->openwith --->notepad--> then html code will open
+2. shift right click on frame_a.html --> copy as path
+3. come back to frames.html code inside frame tag src= paste the path
+4. similarly follow the steps for b,c frames donot remove any attribute from frame tag
+just paste the path in src= 
+
+
+Xpath with single attribute:
+syntax:
+//htmltagname[@attributename='value']
+
+
+Example
+<input type="text" id="001">
+//input[@id='001']
+
+Xpath with multiple Attributes:
+
+syntax:
+//htmltagname[@attributename='value'][@attributename='value']
+
+example:
+<input type="text" id="002">
+
+//input[@id='002'][@type='text']
+
+Css Selector
+
+syntax:
+htmltagname[attributname='value']
+
+example:
+<input type="text" id="003">
+input[id='003']
+
+
+Frames Concept:
+Exception in thread "main" org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='001']"}
+
+Above Exception Will comes in few situations:
+a. may be locator is wrong(mistake in writting)
+b. locator is correct but still browser is not reacting to that element
+   then change the locator
+c. time issue
+   Program will execute very fast it will not wait for fraction of second but browser sometimes takes time to open application.
+d. if inside a page frame tag is there or
+  element on which we want to do action it is inside frame tag.
+
+What is frame?
+Frame is a HTML tag
+It is used to divide the single page into sections
+and in this section multiple html pages will be loaded
+
+
+How to work with elements which is inside frames tag?
+ switch control to frame then only we can work with elements.
+
+How to switch control to farmes?
+We can switch by using driver.switchTo().frame();
+
+In how many ways we can switch control frames?
+3 ways
+a. driver.switchTo().frame(int ) //here int is index value and frame index  starts with 0
+b. driver.switchTo().frame(WebElement )
+//here inspect frame tag and write WebElement by using this webelement we can switch
+c. driver.switchTo().frame(String )
+here String is (inspect frame tag in that  value of  "name" attribute value.)
+
+Exception in thread "main" org.openqa.selenium.NoSuchFrameException: no such frame
+
+If we want to switch control from one frame to another farme 
+first switch to default content and then switch to next frame.
+(means we have to come out of that frame then switch to new frame)
+
+driver.switchTo().defaultContent();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

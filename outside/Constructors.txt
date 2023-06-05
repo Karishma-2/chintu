@@ -1,0 +1,46 @@
+Constructor:
+1. What is constructor?
+It is a special method in java which is used to initialize the object.
+(i.e if class level variables non static varaibles is not 
+initialize then constructor will initialize to default values)
+
+2. How many types constructors?
+   there are two types of constructors
+   1. default constructor(Compiler will add default constructor,which is invoked by JVM(at runtime) when there is no  
+user defined constructor)
+   2. user defined constructor
+      a. without parameters
+      b. with parameters
+3. Rules for writing constructors?
+   1. constructor name is same as class name
+   2. it should not have return type
+   3. access specifier is optional
+4.can constructor can be overloaded or not?
+  yes constructor can be overloaded
+5. Constructor overloading defination?
+   in one class if we found more than one constructor with different 
+parameters list  known as constructor overloading.
+6. diffrence between constructor and methods?
+Methods:
+
+1. method name is user defined
+2. methods are of 4 types
+3. method will have return type 
+4. method is called by using objectname or classname 
+(explictly we have to call the method)
+
+Constructors:
+1. constructor name is same as class name
+2. constructors are of two types
+3. constructors will not have return type 
+4. constructor invoke automatically (implicitly)at 
+the time of object creation no need to call with class name or 
+                                                             object name
+7. Can constructor have Access specifier?
+yes
+if constructor is public we can create object anywhere in Project.
+if constructor is protected we can create Object anywhere inside same package.
+if constructor is private we can create object only in same class. 
+
+8. Can Constructor ovverriding is possible?
+No 

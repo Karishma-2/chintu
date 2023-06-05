@@ -1,0 +1,77 @@
+Dropdown:
+Dropdown are of two types
+a. single selection option, here we can select only one option at a time
+b. multiple selection option, here we can select morethan one option a time.
+
+1. How to identify that component is dropdown or not?
+When ever we inspect any component if the HTML tag is
+"Select" tag then that component is Dropdown
+
+In tag language dropdown is design by using <select> tag
+
+2. 
+** here we will not inspect each and every option in drop down directly.
+then how to select options from dropdown
+
+steps to select options from dropdown:
+1. inspect dropdown and write webelement
+2. To select options from dropdown in selenium
+   we have 3 Predefined method.
+   a. selectByIndex(int ) // int is index value and index start with zero
+   b. selectByValue(String ) // String is option tag "value" attribute value.
+   c. selectByVisibleText(String ) // String is text which is display on dropdown but it is case sensitive
+
+type of methods: -+
+nature of methods: non static
+Access : by object name
+Class:  Select
+Constructor: it is parameterized 
+constructor parameter: WebElement--> dropdown
+package: org.openqa.selenium.support.ui
+
+
+How to get all Options from dropdown?
+method : getOptions()
+type of method: +-
+returntype: List<WebElement>
+nature: non static
+Access: By objectname
+class: Select
+constructor: it is paramterized
+constructor parameter: WebElement--> dropdown
+package: org.openqa.selenium.support.ui
+
+In select class we have a Predefined 
+method : getAllSelectedOptions()
+purpose: returns only selected options
+Type: +-
+return value: List<WebElement>
+nature: non static
+call: objectname
+class: Select
+constructor: it is paramterized
+constructor parameter: WebElement--> dropdown
+package: org.openqa.selenium.support.ui
+
+
+To get Only non selected options "Select" class will not any method
+To get displayed only non selected options we have to use isSelected()
+
+isSelected() method will check element is selected or not
+if is selected it will returns true otherwise false
+and it is applied on WebElements.
+
+To get non selected options apply logical not operator on isSelected();
+
+
+
+
+
+
+
+
+
+
+
+
+

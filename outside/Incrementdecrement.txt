@@ -1,0 +1,76 @@
+Increment ++/Decrement -- Operator:
+1. It is unary operator.
+2. purpose: It is used to increases ++/decreses-- the value only by one.
+
+these operators divided into two types:
+a. POST--> Post++  Post--
+b. PRE-->  Pre++    pre--
+
+Post increment:
+syntax:  variable operator;
+           a++;
+Defination: it will increses the value only by one but after execution of statement.
+
+int a=10;
+int b=a++;
+display a=11 b=10
+
+
+int a=5;
+int b=2*3*a++;
+2*3*5=30
+b=30;
+a=6
+
+
+Pre increment:
+syntax:   operator variable;
+           ++a;
+Defination: it will increses the value only by one but before execution of statement.
+
+int a=10;
+int b=++a;
+display a=11  b=11
+
+int a=5;
+int b=2*3*++a;
+
+a=6
+2*3*6=36
+b=36
+
+Post /Pre decrement:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Examples:
+
+1. int i=2,j=3;
+   int k=i++ + ++j + ++i + j-- + --i;
+    i= 3 j = 3 k =  17
+          2 +  4 + 4 + 4 + 3 = 17
+     
+
+
+
+     
+
+
+
+
+
+
+
+

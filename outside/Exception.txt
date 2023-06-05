@@ -1,0 +1,282 @@
+1. What is Exception
+       An unwanted or un predictable events occur in program which distrubs normal flow of program.
+2. What is the main purpose of Exception handling?
+         For normal termination of program or we can say grace full termination (smooth flow)
+3. What is Exception handling?
+   Providing alternate code to continue rest of code normally i.e known as Exception handling.
+5. Which class is act as a Parent or root class for all Exceptions or errors in java?
+                     Throwable
+6. What is Throwable?
+    Throwable is a super class for all errors and exceptions in java
+7. How many child classes for Throwable?
+     two child classes a. Exception b. Error
+
+8.**** What is the difference between error and exception?  
+
+  Exceptions : Exceptions are Occurred because of  mistake in Program
+               Exceptions are recoverable(means we can handle)
+               Programmer or Programmer catch block will handle
+  Errors: Errors are not caused by programs , due to lack of system resources , memory issue , software crashed...
+          Errors are not recoverable(means we cannot handle)
+          Errors cannot handle by Programmer
+
+9. What is Exception?
+   Exception is Child class of Throwable and Exception class have child classes.
+
+Exception child classes:
+1. Runtime Exception
+      a. Arithmetic Exception
+      b. Null Pointer Exception
+      c. ClassCashedException
+      d. IndexOutOfBoundsException
+               Array
+               String
+       e. IlegalArgumentException
+              NumberFormat
+2. IO Exception
+      EOFException
+      FileNotFoundException
+
+3. Interrupted Exception
+4. Remote Exception
+          
+
+10. What is Error?
+Error is subclass of Throwable and it is having child classes
+       
+a. Virtual Machine Error
+    StackOverflow
+    OutOfMemory
+
+b.Linkage Error
+   VerifyError
+c. AssertionError
+d. ExceptionInIntializerError
+Example:
+Without handling Exception
+package oops;
+public class Exception1 {
+public static void main(String[] args) {
+	System.out.println("Im in main method");
+	int a=100;
+	int b=a/0;
+	System.out.println("B = "+b);
+	System.out.println("Main method terminated");
+}
+}
+
+At Run time:
+Im in main method
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at oops.Exception1.main(Exception1.java:7)
+
+How to handle Exception?
+By using try catch we have to handle Exception.
+
+What is try catch?
+try is block in which we will write suspected code.
+If in try block Exception is encountred then control jump to catch block
+catch block is ready with alternate code but one condition
+catch block must match with try block exception otherwise exception cannot handle.
+
+Example:
+Exception handle
+
+package oops;
+
+public class Exception1 {
+public static void main(String[] args) {
+	System.out.println("Im in main method");
+	int a=100;
+	try {
+		int b=a/0;
+		System.out.println("B = "+b);
+	}
+	catch(ArithmeticException e)
+	{
+		System.out.println("A number cannot divide with zero");
+	}
+	System.out.println("Main method terminated");
+}
+}
+
+output:
+Im in main method
+A number cannot divide with zero
+Main method terminated
+
+
+package oops;
+
+public class Exception1 {
+public static void main(String[] args) {
+	System.out.println("Im in main method");
+	int a=100;
+	try {
+		int b=a/0;
+		System.out.println("B = "+b);
+	}
+	catch(NullPointerException e) 
+	{
+		System.out.println("A number cannot divide with zero");
+	}
+	System.out.println("Main method terminated");
+}
+}
+
+Im in main method
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at oops.Exception1.main(Exception1.java:8)
+
+In above example catch block cannot handle ArithmeticException so again we have to face RunTime Exception. 
+
+
+Can we write one try with multiplecatches?
+yes .
+
+Example:
+package oops;
+
+public class Exception1 {
+public static void main(String[] args) {
+	System.out.println("Im in main method");
+	int a=100;
+	try {
+		int b=a/0;
+		System.out.println("B = "+b);
+	}
+	catch(NullPointerException e)
+	{
+		System.out.println("Null Pointer Exception");
+	}
+	catch(ArithmeticException e)
+	{
+		System.out.println("A number cannot divide with zero");
+	}
+	System.out.println("Main method terminated");
+}
+}
+
+Output:
+Im in main method
+A number cannot divide with zero
+Main method terminated
+
+
+Superclass:
+package oops;
+
+public class Exception1 {
+public static void main(String[] args) {
+	System.out.println("Im in main method");
+	int a=100;
+	int marks[]= {100,200};
+	try {
+		System.out.println(marks[5]);
+		int b=a/0;
+		System.out.println("B = "+b);
+	}
+	catch(NullPointerException e)
+	{
+		System.out.println("Null Pointer Exception");
+	}
+	catch(ArithmeticException e)
+	{
+		System.out.println("A number cannot divide with zero");
+	}
+	catch(Exception e)
+	{
+	System.out.println(e.getMessage());	// here getMessage() will display only Exception msg
+	e.printStackTrace(); // complete Exception msg which package,class line Exception occurred.
+	}
+	System.out.println("Main method terminated");
+}
+}
+
+****** When we are writing multiple catches and super class i.e Exception is included make it should be last catch block
+otherwise will face compile time error: unreachable catch block
+
+example:
+package oops;
+
+public class Exception1 {
+public static void main(String[] args) {
+	System.out.println("Im in main method");
+	int a=100;
+	int marks[]= {100,200};
+	try {
+		System.out.println(marks[5]);
+		int b=a/0;
+		System.out.println("B = "+b);
+	}
+	catch(Exception e)//It can handle all Exceptions as it is super class for all Exceptions
+	{
+	System.out.println(e.getMessage()); 	
+	e.printStackTrace();
+	}
+	catch(NullPointerException e) //complie time error unreachable catch block 
+	{
+		System.out.println("Null Pointer Exception");
+	}
+	catch(ArithmeticException e)//complie time error unreachable catch block 
+	{
+		System.out.println("A number cannot divide with zero");
+	}
+	
+	System.out.println("Main method terminated");
+}
+}
+
+What is throw keyword?
+It is used to generate customized or user define exception.
+
+Example:
+package oops;
+
+public class Exception2 {
+	private double accountbalance=15000;
+	
+	public void withdrawAmount(double amount)
+	{
+		if(amount<=accountbalance)
+		accountbalance-=amount;
+		else
+		{
+			throw new ArithmeticException("InSufficient Balance");
+		}
+	}
+	
+	public void displayBalance()
+	
+	{
+		System.out.println("Current balance : "+accountbalance);
+	}
+	
+public static void main(String[] args) {
+	Exception2 obj=new Exception2();
+	obj.withdrawAmount(20000);
+	obj.displayBalance();
+}
+}
+
+output:
+Exception in thread "main" java.lang.ArithmeticException: InSufficient Balance
+	at oops.Exception2.withdrawAmount(Exception2.java:12)
+	at oops.Exception2.main(Exception2.java:24)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               

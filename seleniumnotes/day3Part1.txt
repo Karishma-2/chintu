@@ -1,0 +1,83 @@
+Alerts:
+1. What is Alert?
+If we do click action on WebElement then any popup
+apears that is known as Alert.
+2. How many types of alerts?
+   1. Java script alert
+   2. Browser Alerts(Browser Authentication)
+3. How to Handle Java script alert?
+   a. switch control to alert by using below line
+      driver.switchTo().alert();
+Here driver WebDriver Object
+switchTo() method
+alert() method
+
+then it will return Alert type-->Reference
+therefore: Alert alert=driver.switchTo().alert();
+
+Alert is Predefine Interface
+Package: org.openqa.selenium.Alert
+
+can we inspect alert elements
+example: buttons ,text, text box?
+No we cannot inspect
+
+How to do actions on alert components?
+to click on OK button in Alert Interface we have accept() method
+to click cancel we have dismiss() method
+to get alert msg we have getText() method
+to write in alert textbox we have sendKeys() method
+
+
+Summarry:
+1. switch control to alert--> Alert alert= driver.switchTo().alert();
+2. to click "ok" button use accept() -->alert.accept()
+3. to click "cancel" button use dismiss()-->alert.dismiss()
+4. to write in "textbox" use sendKeys()--->alert.sendKeys()
+5. to get "alert msg" use getText()-->alert.getText()
+
+Important points:
+1. <a href="/basic_auth">
+Basic Auth
+</a>
+
+When we inspect any element and found <a> tag
+then choose locator as linktext
+here text is "Basic Auth"
+
+2. How to Copy Xpath?
+after inspecting on highlighted tag just do right click and copy-->copy xpath
+
+<a href="/basic_auth">Basic Auth</a>
+ 
+ 1. If we inspect and find tag name is "a" tag  then choose locators as linktext
+    linktext=Basic Auth
+    
+ 2. If we inspect and found open tag and close tag then choose locator as 
+      Xpath with text method
+      syntax:
+      //tagname[text()='middletext']
+       //a[text()='Basic Auth']
+
+Automating Windows Controls with selenium:
+
+Handling Window Authentication Popup.
+
+Two Types Of Pop ups:
+1. Javascript Popup (driver.switchTo().alert())
+2. Windows Authentication popup( it is linked with browser cannot handle with alert() and we cannot inspect elements in this type of popup)
+
+
+Sample WebSite Link:
+
+https://the-internet.herokuapp.com
+
+
+We can handle window popup by using  modifying webdriver url.
+
+Syntax: http://username:password@siteURL
+
+Inside driver.get()  use above syntax automatically it will login .
+
+Example: 
+driver.get( " http://admin:admin@the-internet.herokuapp.com ");

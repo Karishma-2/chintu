@@ -1,0 +1,250 @@
+Logical Operators:
+* Logical operators is used to check morethan one condition
+or
+to combine more than one condition
+or to evaluate morethan one condition
+
+Operators List:
+AND  &&
+OR   ||
+NOT   !
+
+AND operator:
+This operator result or return true if all conditions are true.
+If even one condition is false then final result will be false.
+
+Symbol: &&
+
+Example:
+notice board:
+100     200   Room1
+201     300   Room2
+301     400   Room3
+401     500   Room4
+
+HT: 355
+
+100  200  room1
+HT>= 100 && HT <=200
+355>=100 && 355<=200
+true          false  = false
+
+201  300  room2
+HT>= 201 && HT <=300
+355>=201 && 355<=300
+true          false  = false
+301  400  room3
+HT>= 301 && HT <=400
+355>=301 && 355<=400
+true          true  =true
+
+And Examples:
+1<x<10
+x>=1  && x<=10
+
+x=5
+5>=1  &&  5<=10
+true       true
+      true
+
+Explanation: Here we have two condtions to check and operator is &&
+means if first condition is true then control
+will go two second condition then result depends on second expression.
+
+x=12
+12>=1 && 12<=10
+  true  && false
+       false
+here firstcondition is true then control move to second condition and second condition return false therefore result is false
+
+x=0
+0>=1 && 0<=10
+false
+here first condition is false then control will not move to second condition 
+output is false.
+
+Summary:
+And logical operator will return true if all conditions are true.
+
+first it will check firstcondition if it is true then control move to second condition
+and result(output) depends on second condition
+other wise if first condition is false output is false, it means control will not go to second condition.
+
+
+OR Operator(||):
+This Operator returns true when one of the two condition is true.
+
+OR operator return true if atleast one condition is true.
+
+if all conditions are false then output is false
+
+Example:
+age>=18 and
+
+(election voter ID  or
+
+Adhaar card or
+
+Pancard)
+
+
+x==10 || x>=15
+
+x=10
+
+10==10 || 10>=15
+ true
+
+Here there are two conditions and operator is OR means if any one condition is true overall result is true
+
+** In OR Operator if first condition is true
+   control will not go to second condition
+
+
+x=12
+
+12==10 || 12>=15
+  false    false = false
+first condition is false then control move to second condition then result depends on second condition here in above example second condition is false 
+therfore output is false.
+
+x=20
+20==10 || 20>=15
+ false ||  true  = true
+
+here first second condition is false then control move to second condition and second condition is true then output is true.
+
+
+Logical Not (!): 
+Not ! operator is known as unary operator
+
+unary means action performed on single operand.
+
+example :
+if we want to use + operator we need two values  ex: 2+3  a+b
+
+if we use "not operator" action is performed on single variable or value (i.e boolean)
+
+behaviour of not operator:
+if condition is true it will convert to false
+if condition is false it will convert to true
+
+
+examples:
+2>3=false
+!(2>3)=!false=true.
+
+!true=false
+!false=true
+
+****** Unary operator will have high priority when compare to all operators.
+
+Braces
+unary
+Arithmetic
+Relational
+Logical
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

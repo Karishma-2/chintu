@@ -1,0 +1,130 @@
+Auto Complete Feature:
+1. Launch browser
+2. open URL
+3. Enter Product name in search box
+4. Hit three times down arrow key
+5. Hit Enter key
+6. close browser
+
+** set Path
+System.setProperty("webdriver.chrome.driver","D:\\selniumfiles\\chromedriver97\\chromedriver.exe");
+
+Launch Browser:
+	WebDriver driver=new ChromeDriver();
+Open URL:
+driver.get("http://www.amazon.in");
+
+Enter Product name in search box
+
+Enter Action(writing)
+Product  name (test data)
+Search box (place or component where we have to write)
+
+Search box is a component on WebPage
+so we called as webPage component
+in selenium we called as WebElement
+
+Task : How to identify Search box WebElement?
+
+We can identify WebElement by using locators
+
+In selenium we have following locators by using that we can write webelement and we can perform action on it.
+a. id
+b. name
+c. classname
+d. linkText
+e. xpath
+f. css
+g.tagname
+
+id,name,classname are directly found in HTML tag as attributes.
+
+How to identify locator?
+1. go to webpage , on particular component do rightclick
+  and click inspect,HTML page will open
+Highlighted line is design for that particular component.
+
+front end is design by using tag languages
+
+<> open tag
+</ >closetag
+
+<> open
+
+<   /> open close
+
+example:
+
+<input type="text" id="twotabsearchtextbox" value="almonds 1kg pack offer low price" name="field-keywords" autocomplete="off" placeholder="" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search">
+
+input is html tagname
+type id value name.....html attributes
+in that we need to look for id or name or class
+
+locator:
+id="twotabsearchtextbox"
+
+How to write locator in selenium?
+
+In selenium we have Predefined class called By
+Package : org.openqa.selenium.By
+inside By class we have all static methods
+By amazon_searchbox_locator=By.id("twotabsearchtextbox");
+
+
+How to find WebElement in selenium?
+
+In selenium we have predefined methods:
+a. findElement  --> used to find single element
+b. findElements ---> used to find multiple elements
+
+findElement is a non static method
+class: ChromeDriver interface: WebDriver
+findElement is with returntype with parameter
+returntype: WebElement(it is predefined interface used to store webpage components)
+parameter: By type
+
+WebElement amazon_searchbox_element=driver.findElement(amazon_searchbox_locator);
+
+
+amazon_searchbox_element.sendKeys("Dates");
+
+sendKeys is method to write in search box,text box,text area
+it applied only on webelements
+
+To do Keyboard action on inspected element we have to use keys class
+inside keys class we have all static functions
+
+Keys.Arrow_DOWN
+Keys.Enter
+
+the above key functions we have to use as a parameter in send keys
+
+amazon_searchbox_element.sendKeys(Keys.Arrow_DOWN);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

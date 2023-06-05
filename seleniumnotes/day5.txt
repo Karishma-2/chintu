@@ -1,0 +1,106 @@
+RightClick:
+
+1. To do Right click on any webpage component:
+Method: contextClick(WebElement )
+Type:-+
+parameter: WebElement--> On which we have to do rightclick
+Nature: non static
+Access: by object  name
+Class: Actions
+Constructor: it is parameterized
+constructor parameter: WebDriver object
+package: org.openqa.selenium.interactions
+any method which is calling from Actions class must follow with build().perform() methods.
+
+
+In amazon.in webelement bestsellers
+<a href="/gp/bestsellers/?ref_=nav_cs_bestsellers" class="nav-a  " tabindex="0" data-csa-c-type="link" data-csa-c-slot-id="nav_cs_0" data-csa-c-content-id="nav_cs_bestsellers" data-csa-c-id="uu1325-l30gtf-tcif6v-7yc58k">
+
+Best Sellers
+
+</a>
+
+When ever we inspect element and found <a> tag then choose locator as linktext
+here linktext means text between opentag and closetag
+
+*** After rightclick whatever options are visible
+example 
+open link in new tab
+open link in new window
+inpect.....
+
+these option cannot be inspected
+i.e we cannot automate by using selenium
+to do this action we have take the help of
+JAVA class Robot
+
+Robot is  a predefined class in java.awt package
+it is used to do keyboard action on elements which is not inspectable.
+
+Method:
+        KeyPress(KeyEvent.VK_DOWN)
+        KeyRelease(KeyEvent.VK_DOWN)
+
+type: -+
+parameters:KeyEvent
+          What is KeyEvent?
+         KeyEvent is predefine class
+         consist of all static functions
+          example:KeyEvent.VK_DOWN,KeyEvent.VK_A
+nature: non static methods
+Access: object name
+Class: Robot
+constructor: no parameters
+CheckedException: AWTException
+package: java.awt
+
+Window Handling:
+
+How to shift control from one window to another window?
+How to shift control from one tab to another tab?
+How to shift control from one main window to popups window?
+
+1. Every window will have unique ID
+2. to get current window ID 
+   method: getWindowHandle()
+   type: +-
+   return type: String (ID of current window)
+   nature: non static
+   Access: by objectname
+   class: ChromeDriver
+   Interface: WebDriver
+3. how to get child window id?
+  there is no method define in selenium
+4. how deal with child windows?
+   In selenium ,In webdriver we have a Prdefined non static method which will return all windows Id in session created
+method: getWindowHandles()
+type:+-
+returntype: Set<String>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

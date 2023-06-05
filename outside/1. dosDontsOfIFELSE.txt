@@ -1,0 +1,73 @@
+/*
+What is sequential Programming?
+Step by step execution of program. here each and every statmenet is important order of execution will be linear one by one no statements will be skipped.
+
+What is control flow statements?
+In Java Program execution will top to bottom , execution flow be sequential but if we want to control execution flow of the program we have to use control flow statements
+
+With the help control flow statements we can execute instructions on condition or we can skip statements on conditions.
+we can do same task multiple times,
+we can break the flow in the middle,
+we can continue flow in the middle.
+
+How many types of control flow statements?
+1. decision making statements
+2. iterative statements
+3. jump statements
+
+ decision making statements:
+* here instructions will be executed if condition is true , if condition is false then instructions will skipped
+* decision making statements will not repeate instructions , execution will be done only one time.
+
+decision making statements divided into two types:
+a. conditional statements
+        1. if  2.  if else  3. else if 4. nested if or nested if else
+b. case control statements
+      switch
+
+
+
+  "IF" Flow:
+  if condition is true control move inside body and how many statements are there it will execute
+  if condition is false then complete body part is skipped.
+  
+  1. always if should be in lowercase as it is keyword(error msg: The method If(boolean) is undefined for the type Sample)
+  2. if follows with round braces inside that we have to write condition
+      and condition expression must result to boolean type of data or u can write only boolean  datatype
+ 
+    If we give other than boolean type of data 
+    error msg:
+    Type mismatch: cannot convert from int to boolean  
+  3. do not end "if" with semicolon
+     "if" is end with semicolon no compile time error and no run time error 
+     but "if" terminate in the same line and below part comes under normal program not under "if" control.   
+  4. can i write 100 statements or n of statements inside if body
+    means if condition is true i want to execute morethan one line and if condition is false
+       i want to skip morethan one line?
+       yes
+  5. Is braces is must?
+      must:    if we write morethan one line under if condition
+      optional: if we write only 1 line under if condition
+  6. if we do not write braces i.e body for "if" then only one statement comes under "if" condition
+   
+    if else
+    flow:
+    if condition is true control will go inside if body and execute if body statements and else part is skipped
+    
+    if condition is false  if body is skipped and control directly jump to else body and in else there is no condition to be checked.
+    
+    1. In "if else" Program ,do not end "if" with semicolon
+       if we end with semicolon then compiletime error will occur
+       Reason: else cannot exist with out if
+       ** if can exist without else
+   2. Where if control ends immed write else part
+     otherwise it will create compile time error
+   3. same braces rules is appiled on else part
+   
+   Is braces is must?
+      must:    if we write morethan one line under else part
+      optional: if we write only 1 line under else part
+    4. after else we can write semicolon which will not create any compile time error or runtime
+      but below part comes under normal program not in else control.
+    
+ */

@@ -1,0 +1,221 @@
+1. Requirements:
+a. JDK 11 or 8
+b. eclipse <2021
+c. selenium server standalone jar files 3.141.59
+d. chrome browser: chromedriver
+   Edge browser  : Edgedriver   latest versions
+
+selenium server standalone jar files
+: http://www.selenium.dev/downloads
+a. scroll down 
+b. click on previous release 
+c. choose selenium 3.141.59
+d. download selenium server standalone jar file
+   (single jar file)
+
+
+How to download browser drivers?
+
+chrome browser:
+a. find current version of browser
+    open chromebrowser--> click on 3dots--> go to help--> click on about chrome
+ then version be displayed
+
+b. goto https://chromedriver.chromium.org/downloads
+download chromedriver according to your system browser version.
+
+How to add jar files to a existing java project?
+a. right click on project
+b. go to buildpath
+c. click on configure build path
+d. A window will open in that click on libraries
+    and select classpath
+e. click on Add external jar files
+f. it will navigate to your local system
+d. select jar file from your local system
+g. click on open -->and click on apply and close.
+
+Note: if On project red cross symbol is there It means
+      in program there is a compile time error .
+       If On Project red ! --> symbol is found then the jar files
+       Which is added that is not suitable for Ecllipse
+       then download other version. 
+
+1. Verify title of amazon page
+
+1. Launch chrome browser
+2. Open Amazon URL
+3. Get current page title and consider as actualTitle
+4. compare actualTitle with expected title
+5. closebrowser
+
+WebDriver interface
+
+Implemented classes
+ChromeDriver
+EdgeDriver
+FirefoxDriver
+
+Parent object=new Child();
+Child object=new Child();
+
+
+
+WebDriver driver=new EdgeDriver();
+                         reference Object
+WebDriver is a predefine interface
+Package: org.openqa.selenium.WebDriver
+
+EdgeDriver is predefine implemented class
+Package: org.openqa.selenium.edge.EdgeDriver
+
+Purpose: 
+WebDriver driver=new EdgeDriver();--> Launch Empty Edge browser
+
+
+****Note:
+When we write only one statement
+i.e WebDriver driver=new EdgeDriver();
+and execute the program will face below runtime error
+
+Exception in thread "main" java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.edge.driver system property; 
+
+Will face same issue for different scenario:
+a. if we do not set the path for EdgeDriver
+b. if we set the path but still same error occurs it is because might be webdriver.edge.driver spelling is wrong
+
+What is webdriver.edge.driver?
+It is constant parameter used to set the path
+
+c. path of EdgeDriver might be not having .exe extension
+example:
+expected path: 
+"D:\selniumfile\chromedriver97\chromedriver.exe"
+actual found is:
+D:\selniumfiles\chromedriver97
+
+d. may be path which is given it is not found in location
+
+e. if we copy mam system path.
+
+
+How to set the path?
+1. gotothe palce where you have downloaded and save chromedriver.
+2. open the folder and do shift right click on EdgeDriver.exe  and click  the copyaspath
+3. come back to eclipse program
+  inside main 
+before
+WebDriver driver=new EdgeDriver();
+write below statement
+System.setProperty("webdriver.chrome.driver","D:\selniumfiles\EdgeDriver\EdgeDriver.exe");
+
+change single slash to double slash because java will not allow single slash.
+
+System.setProperty("webdriver.chrome.driver","D:\\selniumfiles\\chromedriver97\\chromedriver.exe");
+
+Now run the program it will launch EdgeBrowser.
+
+
+Second step:
+How to open URL?
+To open URL in selenium webdriver we have two methods
+a. get()
+b. navigate().to()
+
+get():
+purpose: to open URL
+Type of method: -+ without returntype with parameter
+Parameter: String type i.e url
+Nature of method: non static
+How to call non static method ? by Object name
+Object is created for class
+Class name :EdgeDriver
+Interafce : WebDriver
+call method by using webdriver object 
+i.e driver.get("http://www.amazon.in");
+
+
+Third step:
+get title of current page
+
+Method: getTitle()
+Purpose: to get current page title
+Type of method: +- with returntype without parameter
+returntype: String (current title)
+nature of method: non static
+How to call non static method? by object name
+Object is created for class
+Class name: EdgeDriver
+Interface: WebDriver
+call method with webdriver object name
+String actualTitle=driver.getTitle();
+
+
+Fouth step: compare actualTitle with expected title
+Assume expectedtitle as "amazon"
+and use now java if else logic to compare
+and here we comparing two string so we use equals() method
+String expectedTitle="amazon";
+if(actualTitle.equals(expectedTitle))
+   syso("Testscript pass");
+else
+syso("Testscript fail");
+
+FifthStep: close browser
+To close browser 
+method: close()
+driver.close();
+
+
+Assignment: verify URL
+1. Assume expectedURL
+2. Launch Browser
+3. open URL
+4. Get current URL consider as actualURL
+5. compare actualURL with expected URL
+6. close browser
+
+Hint: to get current URL use method getCurrentURL()
+it is defined inside ChromeDriver,WebDriver and it is non static and it return string type.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
